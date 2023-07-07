@@ -16,6 +16,7 @@ public:
     void genSignal() override;
     float genSample() override;
     void setFreq(float freq);
+    float getFreq();
 
 };
 

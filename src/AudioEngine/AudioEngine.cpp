@@ -2,7 +2,7 @@
 
 
 AudioEngine::AudioEngine(int sr, int buffer) : sampleRate(sr), buffer(buffer), data(nullptr), channel("Left") {
-    data = new float[buffer*2]
+    data = new float[buffer*2];
 }
 
 AudioEngine::~AudioEngine() {
@@ -10,11 +10,11 @@ AudioEngine::~AudioEngine() {
 }
 
 void AudioEngine::setChanel(std::string Channel){
-    if (Channel != "Left" || Channel != "Right" || Channel != "Stereo") {
-        throw UnknownChannelException(Channel);
+    if (Channel == "Left" || Channel == "Right" || Channel == "Stereo") {
+        this->channel = Channel;
     }
     else{
-        this->channel = Channel;
+        throw UnknownChannelException(Channel);
     }
 };
 
@@ -41,7 +41,7 @@ void AudioEngine::setSampleInBuffer(float sample, int index) {
 
     //Check if data is null.
     if (data == nullptr){
-        data = new float[buffer*2]
+        data = new float[buffer*2];
     }
 
     //Add data in buffer

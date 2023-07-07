@@ -25,10 +25,13 @@ float PureTone::genSample() {
     angle += offset;
 }
 
-
 void PureTone::setFreq(float freq) {
     //Set freq and reset other parameters
     this->freq = freq;
     offset = 2 * M_PI * freq / (float) sampleRate;
     angle = 0.0;
+}
+
+float PureTone::getFreq() {
+    return this->freq;
 }
