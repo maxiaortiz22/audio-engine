@@ -9,7 +9,7 @@ AudioEngine::~AudioEngine() {
     delete[] data;
 }
 
-void AudioEngine::setChanel(std::string Channel){
+void AudioEngine::setChannel(std::string Channel){
     if (Channel == "Left" || Channel == "Right" || Channel == "Stereo") {
         this->channel = Channel;
     }
@@ -17,6 +17,10 @@ void AudioEngine::setChanel(std::string Channel){
         throw UnknownChannelException(Channel);
     }
 };
+
+std::string AudioEngine::getChannel() const {
+    return channel;
+}
 
 float* AudioEngine::getData() const {
     return data;

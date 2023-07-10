@@ -20,7 +20,8 @@ public:
     virtual void genSignal() = 0;
     virtual float genSample() = 0;
 
-    void setChanel(std::string Channel);
+    void setChannel(std::string Channel);
+    std::string getChannel() const;
     float* getData() const;
     int getSampleRate() const;
     void setAmplitude(float amp);
