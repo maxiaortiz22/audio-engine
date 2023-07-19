@@ -1,21 +1,34 @@
-cmake_minimum_required(VERSION 3.18.1)
+cmake_minimum_required(VERSION 3.12)
 
-project("AudioEngine")
+project(AudioEngine)
 
-add_library(
+# Configura la versión del estándar de C++
+#set(CMAKE_CXX_STANDARD 11)
+#set(CMAKE_CXX_STANDARD_REQUIRED True)
+#cmake_policy(SET CMP0079 NEW)
 
-    "src/AudioEngine/AudioEngine.cpp"
-    "src/ErrorHandling/UnknownChannelException.cpp"
-    "src/Noise/Noise.cpp"
-    "src/PureTone/PureTone.cpp"
-    "src/WarbleTone/WarbleTone.cpp"
+
+# Crea la biblioteca compartida o estática
+add_library(AudioEngine SHARED STATIC
+    src/AudioEngine.cpp
+    src/UnknownChannelException.cpp
+    src/Noise.cpp
+    src/PureTone.cpp
+    src/WarbleTone.cpp
 )
 
-include_directories(
+# Especifica las dependencias de la biblioteca
+target_link_libraries(AudioEngine
+    PRIVATE ErrorHandling
+    PRIVATE Noise
+    PRIVATE PureTone
+    PRIVATE WarbleTone
 
-    "src/AudioEngine/"
-    "src/ErrorHandling/"
-    "src/Noise/"
-    "src/PureTone/"
-    "src/WarbleTone/"
 )
+
+# Establece los directorios de inclusión de la biblioteca
+target_include_directories(AudioEngine PUBLIC
+    "include/"
+)
+
+#add_subdirectory(test)

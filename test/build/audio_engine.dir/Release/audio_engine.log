@@ -1,0 +1,6 @@
+﻿  Building Custom Rule C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/CMakeLists.txt
+  main.cpp
+     Creando biblioteca C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/Release/audio_engine.lib y objeto C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/Release/audio_engine.exp
+  Generando código
+  Generación de código finalizada
+  audio_engine.vcxproj -> C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\test\build\Release\audio_engine.cp39-win_amd64.pyd

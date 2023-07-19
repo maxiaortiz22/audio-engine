@@ -1,0 +1,24 @@
+﻿  Building Custom Rule C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/CMakeLists.txt
+  AudioEngine.cpp
+  UnknownChannelException.cpp
+  Noise.cpp
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\Noise.cpp(8,79): warning C4244: '=': conversión de 'double' a '_Ty'; posible pérdida de datos
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\Noise.cpp(32,76): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  PureTone.cpp
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\PureTone.cpp(6,36): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\PureTone.cpp(13,28): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\PureTone.cpp(32,30): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  WarbleTone.cpp
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\WarbleTone.cpp(6,36): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\WarbleTone.cpp(7,32): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\WarbleTone.cpp(16,28): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\WarbleTone.cpp(19,30): warning C4305: '-=': truncamiento de 'double' a 'float'
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\WarbleTone.cpp(39,36): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\WarbleTone.cpp(52,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  Generando código...
+C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\Noise.cpp(44): warning C4715: 'Noise::genSample': no todas las rutas de acceso de control devuelven un valor
+  AudioEngine.vcxproj -> C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\build\Release\AudioEngine.lib
