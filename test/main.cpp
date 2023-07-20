@@ -50,7 +50,6 @@ PYBIND11_MODULE(audio_engine, m) {
         //.def_property("channel", &AudioEngine::getChannel, &AudioEngine::setChannel)
         .def("setChannel", &AudioEngine::setChannel)
         .def("getChannel", &AudioEngine::getChannel)
-        //.def("getData", &AudioEngine::getData, py::return_value_policy::take_ownership, py::return_value_policy::reference_internal)
         .def_property_readonly("getData", [](const AudioEngine &self) {
             int buffer = self.getBufferSize();
             py::array_t<float> out({buffer * 2}, {sizeof(float)});
