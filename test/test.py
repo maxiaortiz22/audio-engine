@@ -7,7 +7,6 @@ get_lib()
 from AudioTester.test_maker import run
 
 
-
 if __name__ == '__main__':
 
     #Parameters:

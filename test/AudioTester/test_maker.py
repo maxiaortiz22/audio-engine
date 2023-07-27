@@ -1,5 +1,6 @@
 from PureTone import PureToneTest
 from WarbleTone import WarbleToneTest
+from Noise import NoiseTest
 
 def run(sr, buffer):
 
@@ -10,4 +11,8 @@ def run(sr, buffer):
     #Test Warble Tone:
     warble_tone = WarbleToneTest(sr, buffer)
     warble_tone.test()
+
+    #Test Noise:
+    noise = NoiseTest(sr, buffer)
+    noise.test()
 
