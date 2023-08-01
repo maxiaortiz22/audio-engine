@@ -1,5 +1,6 @@
 import numpy as np
 import sounddevice as sd
+from audio_engine import ChannelType
 
 class Tester():
 
@@ -35,10 +36,10 @@ class Tester():
 
         aux_data = []
 
-        if self.audioinstance.getChannel() == 'Left':
+        if self.audioinstance.getChannel() == ChannelType.Left:
             for i in range(0, len(self.data), 2):
                 aux_data.append(self.data[i])
-        elif self.audioinstance.getChannel() == 'Right':
+        elif self.audioinstance.getChannel() == ChannelType.Right:
             for i in range(1, len(self.data), 2):
                 aux_data.append(self.data[i])
 

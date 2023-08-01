@@ -42,6 +42,21 @@ PYBIND11_MODULE(audio_engine, m) {
 
     m.doc() = "C++ to python wrapper for testing AudioEngine library.";
 
+    // NoiseType
+    py::enum_<NoiseType>(m, "NoiseType")
+        .value("White", NoiseType::White)
+        .value("Pink", NoiseType::Pink)
+        .value("Brown", NoiseType::Brown)
+        .value("NBN", NoiseType::NBN)
+        .export_values();
+    
+    // ChannelType
+    py::enum_<ChannelType>(m, "ChannelType")
+        .value("Left", ChannelType::Left)
+        .value("Right", ChannelType::Right)
+        .value("Stereo", ChannelType::Stereo)
+        .export_values();
+
     // AudioEngine
     py::class_<AudioEngine, PyAudioEngine>(m, "AudioEngine")
         .def(py::init<int, int>())

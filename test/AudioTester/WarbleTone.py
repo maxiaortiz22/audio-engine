@@ -1,6 +1,6 @@
 from Tester import Tester
 from progress.bar import IncrementalBar
-from audio_engine import WarbleTone
+from audio_engine import WarbleTone, ChannelType
 from scipy.fft import rfft, rfftfreq
 from scipy.signal import butter, sosfilt, find_peaks
 import numpy as np
@@ -21,7 +21,7 @@ class WarbleToneTest(Tester):
 
         bar = IncrementalBar('Warble tone test', max = len(self.bands)*2)
         
-        for channel in ['Left', 'Right']:
+        for channel in [ChannelType.Left, ChannelType.Right]:
             self.set_channel(channel)
 
             for freq in self.bands:

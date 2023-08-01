@@ -266,10 +266,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\AudioEngine.cpp" />
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\UnknownChannelException.cpp" />
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\AudioExceptions.cpp" />
     <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\Noise.cpp" />
     <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\PureTone.cpp" />
     <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\WarbleTone.cpp" />
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\LibKissFFT\kiss_fft.c" />
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\LibKissFFT\kiss_fftr.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\build\ZERO_CHECK.vcxproj">

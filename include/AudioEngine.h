@@ -1,8 +1,13 @@
 #ifndef AUDIOENGINE_H
 #define AUDIOENGINE_H
 
-#include <string>
-#include "UnknownChannelException.h"
+#include "AudioExceptions.h"
+
+enum class ChannelType {
+    Left,
+    Right,
+    Stereo
+};
 
 class AudioEngine{
 
@@ -11,7 +16,7 @@ protected:
     int buffer;
     float* data;
     float amplitude = 1.0;
-    std::string channel;
+    ChannelType channel;
 
 public:
     AudioEngine(int sampleRate, int buffer); //Constructor
@@ -20,8 +25,8 @@ public:
     virtual void genSignal() = 0;
     virtual float genSample() = 0;
 
-    void setChannel(std::string Channel);
-    std::string getChannel() const;
+    void setChannel(ChannelType Channel);
+    ChannelType getChannel() const;
     float* getData() const;
     int getBufferSize() const;
     int getSampleRate() const;

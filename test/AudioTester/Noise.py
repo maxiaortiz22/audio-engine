@@ -1,6 +1,6 @@
 from Tester import Tester
 from progress.bar import IncrementalBar
-from audio_engine import Noise
+from audio_engine import Noise, ChannelType, NoiseType
 from scipy.fft import rfft, rfftfreq
 import numpy as np
 import sys
@@ -12,7 +12,7 @@ class NoiseTest(Tester):
 
     def __init__(self, sr, buffer, audioclass=Noise):
         super().__init__(sr, buffer, audioclass)
-        self.noise_type = ['White Noise', 'Pink Noise']
+        self.noise_type = [NoiseType.White, NoiseType.Pink, NoiseType.Brown, NoiseType.NBN]
         self.eps = sys.float_info.epsilon
         self.ftick = [20, 31.5, 63, 125, 250, 500, 1000, 2000, 4000, 8000, 16000, 20000]
         self.labels = ['20', '31.5', '63', '125', '250', '500', '1k', '2k', '4k', '8k', '16k', '20k']
@@ -21,14 +21,14 @@ class NoiseTest(Tester):
         
         bar = IncrementalBar('Noise test', max = len(self.noise_type)*2)
 
-        for channel in ['Left', 'Right']:
+        for channel in [ChannelType.Left, ChannelType.Right]:
             self.set_channel(channel)
 
             for type in self.noise_type:
 
                 self.audioinstance.setNoiseType(type, 1)
                 self.gen_data()
-                self.play_data()
+                #self.play_data()
 
                 N = len(self.data)
 

@@ -4,7 +4,7 @@
     <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\AudioEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\UnknownChannelException.cpp">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\AudioExceptions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\Noise.cpp">
@@ -14,6 +14,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\WarbleTone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\LibKissFFT\kiss_fft.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\LibKissFFT\kiss_fftr.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -26,7 +26,7 @@ events:
       Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
       Copyright (C) Microsoft Corporation. Todos los derechos reservados.
       
-      Compilación iniciada a las 19/07/2023 12:38:13.
+      Compilación iniciada a las 01/08/2023 13:34:26.
       Proyecto "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\3.26.3\\CompilerIdC\\CompilerIdC.vcxproj" en nodo 1 (destinos predeterminados).
       PrepareForBuild:
         Creando directorio "Debug\\".
@@ -60,7 +60,7 @@ events:
           0 Advertencia(s)
           0 Errores
       
-      Tiempo transcurrido 00:00:01.11
+      Tiempo transcurrido 00:00:01.14
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -88,7 +88,7 @@ events:
       Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
       Copyright (C) Microsoft Corporation. Todos los derechos reservados.
       
-      Compilación iniciada a las 19/07/2023 12:38:14.
+      Compilación iniciada a las 01/08/2023 13:34:27.
       Proyecto "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\3.26.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" en nodo 1 (destinos predeterminados).
       PrepareForBuild:
         Creando directorio "Debug\\".
@@ -122,7 +122,7 @@ events:
           0 Advertencia(s)
           0 Errores
       
-      Tiempo transcurrido 00:00:00.90
+      Tiempo transcurrido 00:00:00.99
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -141,8 +141,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-retwfo"
-      binary: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-retwfo"
+      source: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-xrnwl8"
+      binary: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-xrnwl8"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -151,46 +151,46 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-retwfo
+        Change Dir: C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-xrnwl8
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_c0ef4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_fe227.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
         Copyright (C) Microsoft Corporation. Todos los derechos reservados.
         
-        Compilación iniciada a las 19/07/2023 12:38:15.
-        Proyecto "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-retwfo\\cmTC_c0ef4.vcxproj" en nodo 1 (destinos predeterminados).
+        Compilación iniciada a las 01/08/2023 13:34:29.
+        Proyecto "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xrnwl8\\cmTC_fe227.vcxproj" en nodo 1 (destinos predeterminados).
         PrepareForBuild:
-          Creando directorio "cmTC_c0ef4.dir\\Debug\\".
-          Creando directorio "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-retwfo\\Debug\\".
-          Creando directorio "cmTC_c0ef4.dir\\Debug\\cmTC_c0ef4.tlog\\".
+          Creando directorio "cmTC_fe227.dir\\Debug\\".
+          Creando directorio "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xrnwl8\\Debug\\".
+          Creando directorio "cmTC_fe227.dir\\Debug\\cmTC_fe227.tlog\\".
         InitializeBuildStatus:
-          Se creará "cmTC_c0ef4.dir\\Debug\\cmTC_c0ef4.tlog\\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+          Se creará "cmTC_fe227.dir\\Debug\\cmTC_fe227.tlog\\unsuccessfulbuild" porque se especificó "AlwaysCreate".
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "C:\\dev\\vcpkg\\installed\\x64-windows\\"
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c0ef4.dir\\Debug\\\\" /Fd"cmTC_c0ef4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fe227.dir\\Debug\\\\" /Fd"cmTC_fe227.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
           Compilador de optimización de C/C++ de Microsoft (R) versión 19.31.31106.2 para x64
           CMakeCCompilerABI.c
           (C) Microsoft Corporation. Todos los derechos reservados.
-          cl /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c0ef4.dir\\Debug\\\\" /Fd"cmTC_c0ef4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          cl /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fe227.dir\\Debug\\\\" /Fd"cmTC_fe227.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-retwfo\\Debug\\cmTC_c0ef4.exe" /INCREMENTAL /ILK:"cmTC_c0ef4.dir\\Debug\\cmTC_c0ef4.ilk" /NOLOGO /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-retwfo/Debug/cmTC_c0ef4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-retwfo/Debug/cmTC_c0ef4.lib" /MACHINE:X64  /machine:x64 cmTC_c0ef4.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_c0ef4.vcxproj -> C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-retwfo\\Debug\\cmTC_c0ef4.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xrnwl8\\Debug\\cmTC_fe227.exe" /INCREMENTAL /ILK:"cmTC_fe227.dir\\Debug\\cmTC_fe227.ilk" /NOLOGO /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-xrnwl8/Debug/cmTC_fe227.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-xrnwl8/Debug/cmTC_fe227.lib" /MACHINE:X64  /machine:x64 cmTC_fe227.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_fe227.vcxproj -> C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xrnwl8\\Debug\\cmTC_fe227.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-retwfo\\Debug\\cmTC_c0ef4.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_c0ef4.dir\\Debug\\cmTC_c0ef4.tlog\\cmTC_c0ef4.write.1u.tlog" "cmTC_c0ef4.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xrnwl8\\Debug\\cmTC_fe227.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_fe227.dir\\Debug\\cmTC_fe227.tlog\\cmTC_fe227.write.1u.tlog" "cmTC_fe227.dir\\Debug\\vcpkg.applocal.log"
           "pwsh.exe" no se reconoce como un comando interno o externo,
           programa o archivo por lotes ejecutable.
-          El comando "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-retwfo\\Debug\\cmTC_c0ef4.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_c0ef4.dir\\Debug\\cmTC_c0ef4.tlog\\cmTC_c0ef4.write.1u.tlog" "cmTC_c0ef4.dir\\Debug\\vcpkg.applocal.log"" salió con el código 9009.
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-retwfo\\Debug\\cmTC_c0ef4.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_c0ef4.dir\\Debug\\cmTC_c0ef4.tlog\\cmTC_c0ef4.write.1u.tlog" "cmTC_c0ef4.dir\\Debug\\vcpkg.applocal.log"
+          El comando "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xrnwl8\\Debug\\cmTC_fe227.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_fe227.dir\\Debug\\cmTC_fe227.tlog\\cmTC_fe227.write.1u.tlog" "cmTC_fe227.dir\\Debug\\vcpkg.applocal.log"" salió con el código 9009.
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xrnwl8\\Debug\\cmTC_fe227.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_fe227.dir\\Debug\\cmTC_fe227.tlog\\cmTC_fe227.write.1u.tlog" "cmTC_fe227.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          Se eliminará el archivo "cmTC_c0ef4.dir\\Debug\\cmTC_c0ef4.tlog\\unsuccessfulbuild".
-          Aplicando tarea Touch a "cmTC_c0ef4.dir\\Debug\\cmTC_c0ef4.tlog\\cmTC_c0ef4.lastbuildstate".
-        Compilación del proyecto terminada "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-retwfo\\cmTC_c0ef4.vcxproj" (destinos predeterminados).
+          Se eliminará el archivo "cmTC_fe227.dir\\Debug\\cmTC_fe227.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_fe227.dir\\Debug\\cmTC_fe227.tlog\\cmTC_fe227.lastbuildstate".
+        Compilación del proyecto terminada "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xrnwl8\\cmTC_fe227.vcxproj" (destinos predeterminados).
         
         Compilación correcta.
             0 Advertencia(s)
             0 Errores
         
-        Tiempo transcurrido 00:00:00.90
+        Tiempo transcurrido 00:00:01.04
         
       exitCode: 0
   -
@@ -202,8 +202,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-o4ua3l"
-      binary: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-o4ua3l"
+      source: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-kjjvp1"
+      binary: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-kjjvp1"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -212,46 +212,46 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-o4ua3l
+        Change Dir: C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-kjjvp1
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_77ab2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_4efde.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
         Copyright (C) Microsoft Corporation. Todos los derechos reservados.
         
-        Compilación iniciada a las 19/07/2023 12:38:16.
-        Proyecto "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o4ua3l\\cmTC_77ab2.vcxproj" en nodo 1 (destinos predeterminados).
+        Compilación iniciada a las 01/08/2023 13:34:30.
+        Proyecto "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjjvp1\\cmTC_4efde.vcxproj" en nodo 1 (destinos predeterminados).
         PrepareForBuild:
-          Creando directorio "cmTC_77ab2.dir\\Debug\\".
-          Creando directorio "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o4ua3l\\Debug\\".
-          Creando directorio "cmTC_77ab2.dir\\Debug\\cmTC_77ab2.tlog\\".
+          Creando directorio "cmTC_4efde.dir\\Debug\\".
+          Creando directorio "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjjvp1\\Debug\\".
+          Creando directorio "cmTC_4efde.dir\\Debug\\cmTC_4efde.tlog\\".
         InitializeBuildStatus:
-          Se creará "cmTC_77ab2.dir\\Debug\\cmTC_77ab2.tlog\\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+          Se creará "cmTC_4efde.dir\\Debug\\cmTC_4efde.tlog\\unsuccessfulbuild" porque se especificó "AlwaysCreate".
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "C:\\dev\\vcpkg\\installed\\x64-windows\\"
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_77ab2.dir\\Debug\\\\" /Fd"cmTC_77ab2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4efde.dir\\Debug\\\\" /Fd"cmTC_4efde.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
           Compilador de optimización de C/C++ de Microsoft (R) versión 19.31.31106.2 para x64
           CMakeCXXCompilerABI.cpp
           (C) Microsoft Corporation. Todos los derechos reservados.
-          cl /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_77ab2.dir\\Debug\\\\" /Fd"cmTC_77ab2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4efde.dir\\Debug\\\\" /Fd"cmTC_4efde.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o4ua3l\\Debug\\cmTC_77ab2.exe" /INCREMENTAL /ILK:"cmTC_77ab2.dir\\Debug\\cmTC_77ab2.ilk" /NOLOGO /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-o4ua3l/Debug/cmTC_77ab2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-o4ua3l/Debug/cmTC_77ab2.lib" /MACHINE:X64  /machine:x64 cmTC_77ab2.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_77ab2.vcxproj -> C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o4ua3l\\Debug\\cmTC_77ab2.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjjvp1\\Debug\\cmTC_4efde.exe" /INCREMENTAL /ILK:"cmTC_4efde.dir\\Debug\\cmTC_4efde.ilk" /NOLOGO /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-kjjvp1/Debug/cmTC_4efde.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-kjjvp1/Debug/cmTC_4efde.lib" /MACHINE:X64  /machine:x64 cmTC_4efde.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_4efde.vcxproj -> C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjjvp1\\Debug\\cmTC_4efde.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o4ua3l\\Debug\\cmTC_77ab2.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_77ab2.dir\\Debug\\cmTC_77ab2.tlog\\cmTC_77ab2.write.1u.tlog" "cmTC_77ab2.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjjvp1\\Debug\\cmTC_4efde.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_4efde.dir\\Debug\\cmTC_4efde.tlog\\cmTC_4efde.write.1u.tlog" "cmTC_4efde.dir\\Debug\\vcpkg.applocal.log"
           "pwsh.exe" no se reconoce como un comando interno o externo,
           programa o archivo por lotes ejecutable.
-          El comando "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o4ua3l\\Debug\\cmTC_77ab2.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_77ab2.dir\\Debug\\cmTC_77ab2.tlog\\cmTC_77ab2.write.1u.tlog" "cmTC_77ab2.dir\\Debug\\vcpkg.applocal.log"" salió con el código 9009.
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o4ua3l\\Debug\\cmTC_77ab2.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_77ab2.dir\\Debug\\cmTC_77ab2.tlog\\cmTC_77ab2.write.1u.tlog" "cmTC_77ab2.dir\\Debug\\vcpkg.applocal.log"
+          El comando "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjjvp1\\Debug\\cmTC_4efde.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_4efde.dir\\Debug\\cmTC_4efde.tlog\\cmTC_4efde.write.1u.tlog" "cmTC_4efde.dir\\Debug\\vcpkg.applocal.log"" salió con el código 9009.
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjjvp1\\Debug\\cmTC_4efde.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_4efde.dir\\Debug\\cmTC_4efde.tlog\\cmTC_4efde.write.1u.tlog" "cmTC_4efde.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          Se eliminará el archivo "cmTC_77ab2.dir\\Debug\\cmTC_77ab2.tlog\\unsuccessfulbuild".
-          Aplicando tarea Touch a "cmTC_77ab2.dir\\Debug\\cmTC_77ab2.tlog\\cmTC_77ab2.lastbuildstate".
-        Compilación del proyecto terminada "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o4ua3l\\cmTC_77ab2.vcxproj" (destinos predeterminados).
+          Se eliminará el archivo "cmTC_4efde.dir\\Debug\\cmTC_4efde.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_4efde.dir\\Debug\\cmTC_4efde.tlog\\cmTC_4efde.lastbuildstate".
+        Compilación del proyecto terminada "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kjjvp1\\cmTC_4efde.vcxproj" (destinos predeterminados).
         
         Compilación correcta.
             0 Advertencia(s)
             0 Errores
         
-        Tiempo transcurrido 00:00:00.94
+        Tiempo transcurrido 00:00:00.99
         
       exitCode: 0
   -
@@ -267,8 +267,8 @@ events:
     checks:
       - "Performing Test HAS_MSVC_GL_LTCG"
     directories:
-      source: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-q75378"
-      binary: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-q75378"
+      source: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-lha600"
+      binary: "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-lha600"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -278,54 +278,54 @@ events:
       variable: "HAS_MSVC_GL_LTCG"
       cached: true
       stdout: |
-        Change Dir: C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-q75378
+        Change Dir: C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-lha600
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_73cc2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_629d3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
         Copyright (C) Microsoft Corporation. Todos los derechos reservados.
         
-        Compilación iniciada a las 19/07/2023 12:38:19.
-        Proyecto "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\cmTC_73cc2.vcxproj" en nodo 1 (destinos predeterminados).
+        Compilación iniciada a las 01/08/2023 13:34:32.
+        Proyecto "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\cmTC_629d3.vcxproj" en nodo 1 (destinos predeterminados).
         PrepareForBuild:
-          Creando directorio "cmTC_73cc2.dir\\Debug\\".
-          Creando directorio "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\Debug\\".
-          Creando directorio "cmTC_73cc2.dir\\Debug\\cmTC_73cc2.tlog\\".
+          Creando directorio "cmTC_629d3.dir\\Debug\\".
+          Creando directorio "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\Debug\\".
+          Creando directorio "cmTC_629d3.dir\\Debug\\cmTC_629d3.tlog\\".
         InitializeBuildStatus:
-          Se creará "cmTC_73cc2.dir\\Debug\\cmTC_73cc2.tlog\\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+          Se creará "cmTC_629d3.dir\\Debug\\cmTC_629d3.tlog\\unsuccessfulbuild" porque se especificó "AlwaysCreate".
         VcpkgTripletSelection:
           Using triplet "x64-windows" from "C:\\dev\\vcpkg\\installed\\x64-windows\\"
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_73cc2.dir\\Debug\\\\" /Fd"cmTC_73cc2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\src.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_629d3.dir\\Debug\\\\" /Fd"cmTC_629d3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\src.cxx"
           Compilador de optimización de C/C++ de Microsoft (R) versión 19.31.31106.2 para x64
           src.cxx
           (C) Microsoft Corporation. Todos los derechos reservados.
-          cl /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_73cc2.dir\\Debug\\\\" /Fd"cmTC_73cc2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\src.cxx"
+          cl /c /I"C:\\dev\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /GL /D _MBCS /D WIN32 /D _WINDOWS /D HAS_MSVC_GL_LTCG /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_629d3.dir\\Debug\\\\" /Fd"cmTC_629d3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\src.cxx"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\Debug\\cmTC_73cc2.exe" /INCREMENTAL /ILK:"cmTC_73cc2.dir\\Debug\\cmTC_73cc2.ilk" /NOLOGO /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" "-LTCG" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-q75378/Debug/cmTC_73cc2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-q75378/Debug/cmTC_73cc2.lib" /MACHINE:X64  /machine:x64 cmTC_73cc2.dir\\Debug\\src.obj
-        LINK : warning LNK4075: se omite '/INCREMENTAL' debido a la especificación '/LTCG' [C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\cmTC_73cc2.vcxproj]
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\Debug\\cmTC_629d3.exe" /INCREMENTAL /ILK:"cmTC_629d3.dir\\Debug\\cmTC_629d3.ilk" /NOLOGO /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib" /LIBPATH:"C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\manual-link" "-LTCG" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-lha600/Debug/cmTC_629d3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/CMakeScratch/TryCompile-lha600/Debug/cmTC_629d3.lib" /MACHINE:X64  /machine:x64 cmTC_629d3.dir\\Debug\\src.obj
+        LINK : warning LNK4075: se omite '/INCREMENTAL' debido a la especificación '/LTCG' [C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\cmTC_629d3.vcxproj]
           Generando código
           Generación de código finalizada
-          cmTC_73cc2.vcxproj -> C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\Debug\\cmTC_73cc2.exe
+          cmTC_629d3.vcxproj -> C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\Debug\\cmTC_629d3.exe
         AppLocalFromInstalled:
-          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\Debug\\cmTC_73cc2.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_73cc2.dir\\Debug\\cmTC_73cc2.tlog\\cmTC_73cc2.write.1u.tlog" "cmTC_73cc2.dir\\Debug\\vcpkg.applocal.log"
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\Debug\\cmTC_629d3.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_629d3.dir\\Debug\\cmTC_629d3.tlog\\cmTC_629d3.write.1u.tlog" "cmTC_629d3.dir\\Debug\\vcpkg.applocal.log"
           "pwsh.exe" no se reconoce como un comando interno o externo,
           programa o archivo por lotes ejecutable.
-          El comando "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\Debug\\cmTC_73cc2.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_73cc2.dir\\Debug\\cmTC_73cc2.tlog\\cmTC_73cc2.write.1u.tlog" "cmTC_73cc2.dir\\Debug\\vcpkg.applocal.log"" salió con el código 9009.
-          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\Debug\\cmTC_73cc2.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_73cc2.dir\\Debug\\cmTC_73cc2.tlog\\cmTC_73cc2.write.1u.tlog" "cmTC_73cc2.dir\\Debug\\vcpkg.applocal.log"
+          El comando "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\Debug\\cmTC_629d3.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_629d3.dir\\Debug\\cmTC_629d3.tlog\\cmTC_629d3.write.1u.tlog" "cmTC_629d3.dir\\Debug\\vcpkg.applocal.log"" salió con el código 9009.
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\dev\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\Debug\\cmTC_629d3.exe" "C:\\dev\\vcpkg\\installed\\x64-windows\\debug\\bin" "cmTC_629d3.dir\\Debug\\cmTC_629d3.tlog\\cmTC_629d3.write.1u.tlog" "cmTC_629d3.dir\\Debug\\vcpkg.applocal.log"
         FinalizeBuildStatus:
-          Se eliminará el archivo "cmTC_73cc2.dir\\Debug\\cmTC_73cc2.tlog\\unsuccessfulbuild".
-          Aplicando tarea Touch a "cmTC_73cc2.dir\\Debug\\cmTC_73cc2.tlog\\cmTC_73cc2.lastbuildstate".
-        Compilación del proyecto terminada "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\cmTC_73cc2.vcxproj" (destinos predeterminados).
+          Se eliminará el archivo "cmTC_629d3.dir\\Debug\\cmTC_629d3.tlog\\unsuccessfulbuild".
+          Aplicando tarea Touch a "cmTC_629d3.dir\\Debug\\cmTC_629d3.tlog\\cmTC_629d3.lastbuildstate".
+        Compilación del proyecto terminada "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\cmTC_629d3.vcxproj" (destinos predeterminados).
         
         Compilación correcta.
         
-        "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\cmTC_73cc2.vcxproj" (destino predeterminado) (1) ->
+        "C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\cmTC_629d3.vcxproj" (destino predeterminado) (1) ->
         (Link destino) -> 
-          LINK : warning LNK4075: se omite '/INCREMENTAL' debido a la especificación '/LTCG' [C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q75378\\cmTC_73cc2.vcxproj]
+          LINK : warning LNK4075: se omite '/INCREMENTAL' debido a la especificación '/LTCG' [C:\\Users\\maxia\\OneDrive\\Desktop\\uSound\\audio-engine\\test\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lha600\\cmTC_629d3.vcxproj]
         
             1 Advertencia(s)
             0 Errores
         
-        Tiempo transcurrido 00:00:00.91
+        Tiempo transcurrido 00:00:01.01
         
       exitCode: 0
 ...

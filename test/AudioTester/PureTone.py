@@ -1,6 +1,6 @@
 from Tester import Tester
 from progress.bar import IncrementalBar
-from audio_engine import PureTone
+from audio_engine import PureTone, ChannelType
 import numpy as np
 from scipy.fft import fft, fftfreq
 import matplotlib.pyplot as plt
@@ -24,7 +24,7 @@ class PureToneTest(Tester):
         fig, (ax1, ax2) = plt.subplots(2)
 
         signal = np.zeros(self.N)
-        for channel in ['Left', 'Right']:
+        for channel in [ChannelType.Left, ChannelType.Right]:
             self.set_channel(channel)
 
             for freq in self.bands:
@@ -41,13 +41,13 @@ class PureToneTest(Tester):
                 self.fft = fft(signal)
                 self.fft = 2.0/self.N * np.abs(self.fft[0:self.N//2])
 
-                if channel == 'Left':
+                if channel == ChannelType.Left:
                     ax1.semilogx(self.f, self.fft / np.max(self.fft),'b')
                     ax1.set_xticks(self.ftick)
                     ax1.set_xticklabels(self.labels, rotation=45)
                     ax1.set_xlim(100, 10000)
 
-                elif channel == 'Right':
+                elif channel == ChannelType.Right:
                     ax2.semilogx(self.f, self.fft / np.max(self.fft), 'r')
                     ax2.set_xticks(self.ftick)
                     ax2.set_xticklabels(self.labels, rotation=45)

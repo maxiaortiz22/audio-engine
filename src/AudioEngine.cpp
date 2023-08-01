@@ -1,7 +1,7 @@
 #include "AudioEngine.h"
 
 
-AudioEngine::AudioEngine(int sr, int buffer) : sampleRate(sr), buffer(buffer), data(nullptr), channel("Left") {
+AudioEngine::AudioEngine(int sr, int buffer) : sampleRate(sr), buffer(buffer), data(nullptr), channel(ChannelType::Left) {
     data = new float[buffer*2];
 }
 
@@ -9,16 +9,12 @@ AudioEngine::~AudioEngine() {
     delete[] data;
 }
 
-void AudioEngine::setChannel(std::string Channel){
-    if (Channel == "Left" || Channel == "Right" || Channel == "Stereo") {
-        this->channel = Channel;
-    }
-    else{
-        throw UnknownChannelException(Channel);
-    }
+void AudioEngine::setChannel(ChannelType Channel){
+
+    this->channel = Channel;
 };
 
-std::string AudioEngine::getChannel() const {
+ChannelType AudioEngine::getChannel() const {
     return channel;
 }
 
@@ -53,17 +49,21 @@ void AudioEngine::setSampleInBuffer(float sample, int index) {
     }
 
     //Add data in buffer
-    if (channel == "Left") {
-        data[index] = sample;
-        data[index + 1] = 0;
-    } else if (channel == "Right") {
-        data[index] = 0;
-        data[index + 1] = sample;
-    } else if (channel == "Stereo") {
-        data[index] = sample;
-        data[index + 1] = sample;
-    } else {
-        throw UnknownChannelException(channel);
+    switch (channel) {
+        case ChannelType::Left:
+            data[index] = sample;
+            data[index + 1] = 0;
+            break;
+        case ChannelType::Right:
+            data[index] = 0;
+            data[index + 1] = sample;
+            break;
+        case ChannelType::Stereo:
+            data[index] = sample;
+            data[index + 1] = sample;
+            break;
+        default:
+            throw UnknownChannelException("Unknown channel type.");
     }
 
 }

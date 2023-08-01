@@ -1,13 +1,8 @@
 #include "Noise.h"
+#include "kiss_fft.h"
+#include "kiss_fftr.h"
 
-Noise::Noise(int sampleRate, int buffer) : AudioEngine(sampleRate, buffer), generator(std::random_device()()), distribution(-1.0f, 1.0f) {
-    //Pink noise initialization:
-    std::random_device rd;
-    gRandom.seed(rd());
-    for (int i = 0; i < kMaxKey; ++i) {
-        gValues[i] = ((gRandom() % kNumWhiteValues) / float(kNumWhiteValues)) - 0.5;
-    }
-}
+Noise::Noise(int sampleRate, int buffer) : AudioEngine(sampleRate, buffer), generator(std::random_device()()), distribution(-1.0f, 1.0f) {}
 
 void Noise::genSignal() {
 
@@ -20,30 +15,26 @@ void Noise::genSignal() {
 
 float Noise::genSample() {
 
-    if (noiseType == "White Noise"){
-        return amplitude * distribution(generator);
-
-    } else if (noiseType == "NBN") { 
-        return amplitude * distribution(generator); //IMPLEMENT FILTERS!!!
-
-    } else if (noiseType == "Pink Noise") {
-
-        int last_key = gRandom() & kMaxKey;
-        gRange += ((gRandom() % kNumWhiteValues) / float(kNumWhiteValues)) - 0.5;
-        if (gRange < 0) {
-            gRange = -gRange;
-            gValues[last_key] = -gValues[last_key];
-        }
-        if (gRange >= 1) {
-            gRange = 2 - gRange;
-            gValues[last_key] = -gValues[last_key];
-        }
-        return gValues[last_key] * 2;
-
+    switch (noiseType) {
+        case NoiseType::White:
+            return amplitude * distribution(generator);
+            break;
+        case NoiseType::Pink:
+            return amplitude * distribution(generator);
+            break;
+        case NoiseType::Brown:
+            return amplitude * distribution(generator);
+            break;
+        case NoiseType::NBN:
+            return amplitude * distribution(generator);
+            break;
+        default:
+            throw UnknownNoiseTypeException("Unknown type of noise.");
     }
+
 }
 
-void Noise::setNoiseType(std::string noiseType, float freq) {
+void Noise::setNoiseType(NoiseType noiseType, float freq) {
     this->noiseType = noiseType;
     this->freq = freq;
 }

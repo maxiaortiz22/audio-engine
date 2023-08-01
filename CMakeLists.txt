@@ -11,24 +11,15 @@ project(AudioEngine)
 # Crea la biblioteca compartida o estática
 add_library(AudioEngine SHARED STATIC
     src/AudioEngine.cpp
-    src/UnknownChannelException.cpp
+    src/AudioExceptions.cpp
     src/Noise.cpp
     src/PureTone.cpp
     src/WarbleTone.cpp
-)
-
-# Especifica las dependencias de la biblioteca
-target_link_libraries(AudioEngine
-    PRIVATE ErrorHandling
-    PRIVATE Noise
-    PRIVATE PureTone
-    PRIVATE WarbleTone
-
+    src/LibKissFFT/kiss_fft.c
+    src/LibKissFFT/kiss_fftr.c
 )
 
 # Establece los directorios de inclusión de la biblioteca
 target_include_directories(AudioEngine PUBLIC
     "include/"
 )
-
-#add_subdirectory(test)
