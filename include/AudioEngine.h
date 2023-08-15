@@ -2,6 +2,7 @@
 #define AUDIOENGINE_H
 
 #include "AudioExceptions.h"
+#include "db.h"
 
 enum class ChannelType {
     Left,
@@ -15,7 +16,8 @@ protected:
     int sampleRate;
     int buffer;
     float* data;
-    float amplitude = 1.0;
+    float gain;
+    float amplitude;
     ChannelType channel;
 
 public:
@@ -30,7 +32,7 @@ public:
     float* getData() const;
     int getBufferSize() const;
     int getSampleRate() const;
-    void setAmplitude(float amp);
+    virtual void setGain(float gain);
     void freeBuffer();
     void setSampleInBuffer(float sample, int index);
 };

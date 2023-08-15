@@ -1,4 +1,0 @@
-C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/audio_engine.dir
-C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/pybind11/CMakeFiles/ALL_BUILD.dir

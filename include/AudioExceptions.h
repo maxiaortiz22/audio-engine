@@ -14,4 +14,9 @@ public:
     UnknownNoiseTypeException(const std::string& message);
 };
 
+class UnknownGainException : public std::runtime_error {
+public:
+    UnknownGainException(const std::string& message);
+};
+
 #endif  // AUDIOEXCEPTIONS_H

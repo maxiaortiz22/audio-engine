@@ -5,3 +5,6 @@ UnknownChannelException::UnknownChannelException(const std::string& message)
 
 UnknownNoiseTypeException::UnknownNoiseTypeException(const std::string& message)
     : std::runtime_error(message) {}
+
+UnknownGainException::UnknownGainException(const std::string& message)
+    : std::runtime_error(message) {}

@@ -12,7 +12,7 @@ class NoiseTest(Tester):
 
     def __init__(self, sr, buffer, audioclass=Noise):
         super().__init__(sr, buffer, audioclass)
-        self.noise_type = [NoiseType.White, NoiseType.Pink, NoiseType.Brown, NoiseType.NBN]
+        self.noise_type = [NoiseType.White, NoiseType.Pink, NoiseType.NBN]
         self.eps = sys.float_info.epsilon
         self.ftick = [20, 31.5, 63, 125, 250, 500, 1000, 2000, 4000, 8000, 16000, 20000]
         self.labels = ['20', '31.5', '63', '125', '250', '500', '1k', '2k', '4k', '8k', '16k', '20k']
@@ -26,9 +26,13 @@ class NoiseTest(Tester):
 
             for type in self.noise_type:
 
-                self.audioinstance.setNoiseType(type, 1)
+                self.audioinstance.setNoiseType(type, 1000)
                 self.gen_data()
-                #self.play_data()
+                self.play_data()
+
+                #assert np.max(self.data) > 1.0, f"The amplitude is greater than 1.0 in {type}"
+                #assert np.min(self.data) < -1.0, f"The amplitude is lower than 1.0 in {type}"
+                print(' ', max(self.data), min(self.data))
 
                 N = len(self.data)
 

@@ -15,6 +15,7 @@ public:
     using AudioEngine::AudioEngine; // Inherit constructors
     void genSignal() override { PYBIND11_OVERRIDE_PURE(void, AudioEngine, genSignal, ); }
     float genSample() override { PYBIND11_OVERRIDE_PURE(float, AudioEngine, genSample, ); }
+    void setGain(float gain) override { PYBIND11_OVERRIDE_PURE(void, AudioEngine, setGain, gain); }
 };
 
 class PyPureTone : public PureTone {
@@ -22,6 +23,7 @@ public:
     using PureTone::PureTone; // Inherit constructors
     void genSignal() override { PYBIND11_OVERRIDE(void, PureTone, genSignal, ); }
     float genSample() override { PYBIND11_OVERRIDE(float, PureTone, genSample, ); }
+    void setGain(float gain) override { PYBIND11_OVERRIDE(void, AudioEngine, setGain, gain); }
 };
 
 class PyNoise : public Noise {
@@ -46,7 +48,6 @@ PYBIND11_MODULE(audio_engine, m) {
     py::enum_<NoiseType>(m, "NoiseType")
         .value("White", NoiseType::White)
         .value("Pink", NoiseType::Pink)
-        .value("Brown", NoiseType::Brown)
         .value("NBN", NoiseType::NBN)
         .export_values();
     
@@ -73,7 +74,7 @@ PYBIND11_MODULE(audio_engine, m) {
             return out;
         })
         .def("getSampleRate", &AudioEngine::getSampleRate)
-        .def("setAmplitude", &AudioEngine::setAmplitude)
+        .def("setGain", &AudioEngine::setGain)
         .def("freeBuffer", &AudioEngine::freeBuffer)
         .def("setSampleInBuffer", &AudioEngine::setSampleInBuffer);
 
@@ -83,6 +84,7 @@ PYBIND11_MODULE(audio_engine, m) {
         .def("genSignal", &PureTone::genSignal)
         .def("genSample", &PureTone::genSample)
         //.def_property("freq", &PureTone::getFreq, &PureTone::setFreq)
+        .def("setGain", &PureTone::setGain)
         .def("setFreq", &PureTone::setFreq)
         .def("getFreq", &PureTone::getFreq);
 

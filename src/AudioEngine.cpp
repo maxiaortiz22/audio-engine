@@ -3,6 +3,8 @@
 
 AudioEngine::AudioEngine(int sr, int buffer) : sampleRate(sr), buffer(buffer), data(nullptr), channel(ChannelType::Left) {
     data = new float[buffer*2];
+    gain = 0.0;
+    amplitude = dB2Lin(gain);
 }
 
 AudioEngine::~AudioEngine() {
@@ -30,8 +32,9 @@ int AudioEngine::getSampleRate() const {
     return sampleRate;
 }
 
-void AudioEngine::setAmplitude(float amp) {
-    amplitude = amp;
+void AudioEngine::setGain(float gain) {
+    this->gain = gain;
+    amplitude = dB2Lin(this->gain);
 }
 
 void AudioEngine::freeBuffer() {

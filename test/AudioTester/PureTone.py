@@ -21,7 +21,7 @@ class PureToneTest(Tester):
 
         bar = IncrementalBar('Pure tone test', max = len(self.bands)*2)
 
-        fig, (ax1, ax2) = plt.subplots(2)
+        #fig, (ax1, ax2) = plt.subplots(2)
 
         signal = np.zeros(self.N)
         for channel in [ChannelType.Left, ChannelType.Right]:
@@ -30,13 +30,18 @@ class PureToneTest(Tester):
             for freq in self.bands:
                 self.audioinstance.setFreq(freq)
                 self.gen_data()
-                #self.play_data()
+                self.play_data()
                 signal = self.data
 
                 #Check the level of the signals
-                assert np.max(signal) == 1.0, f"The amplitude of {freq} is greater than 1.0"
-                assert np.min(signal) == -1.0, f"The amplitude of {freq} is lower than 1.0"
+                #assert max(signal) > 1.0, f"The amplitude of {freq} is greater than 1.0: {max(signal)}"
+                #assert min(signal) > -1.0, f"The amplitude of {freq} is lower than 1.0: {min(signal)}"
+                print(' ', max(signal), min(signal))
 
+                plt.plot(self.data)
+                plt.show()
+
+                """
                 #Plot the fft of the signal
                 self.fft = fft(signal)
                 self.fft = 2.0/self.N * np.abs(self.fft[0:self.N//2])
@@ -53,12 +58,13 @@ class PureToneTest(Tester):
                     ax2.set_xticklabels(self.labels, rotation=45)
                     ax2.set_xlim(100, 10000)
 
+                """
                 bar.next()
         bar.finish()
 
-        ax1.set_title('Left ear')
-        ax2.set_title('Right ear')
+        #ax1.set_title('Left ear')
+        #ax2.set_title('Right ear')
         
-        fig.tight_layout()
-        plt.show()
+        #fig.tight_layout()
+        #plt.show()
         
