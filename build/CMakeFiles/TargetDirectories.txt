@@ -1,0 +1,3 @@
+C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/build/CMakeFiles/AudioEngine.dir
+C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/build/CMakeFiles/ZERO_CHECK.dir

@@ -15,10 +15,35 @@ class Tester():
     def gen_data(self):
         self.data = np.array([])
         iteration = self._total_iterations(self.duration)
+
+        self.audioinstance.setGain(0)
+        self.audioinstance.signalEmissionEnabled()
         
-        for _ in range(iteration):
+        for _ in range(int(iteration/2)):
             self.audioinstance.genSignal()
             self.data = np.append(self.data, self.audioinstance.getData.flat)
+
+        self.audioinstance.setGain(-10)
+
+        for _ in range(int(iteration/2)):
+            self.audioinstance.genSignal()
+            self.data = np.append(self.data, self.audioinstance.getData.flat)
+
+        self.audioinstance.setGain(-130)
+
+        for _ in range(37):
+            self.audioinstance.genSignal()
+            self.data = np.append(self.data, self.audioinstance.getData.flat)
+        
+        self.audioinstance.freeBuffer()
+
+        #while not self.audioinstance.isBypassed():
+        #    print("ENTRE!!!!")
+        #    self.audioinstance.genSignal()
+        #    self.data = np.append(self.data, self.audioinstance.getData.flat)
+        
+        #self.audioinstance.freeBuffer()
+
 
         self._get_data_by_channel()
 
@@ -43,7 +68,7 @@ class Tester():
             for i in range(1, len(self.data), 2):
                 aux_data.append(self.data[i])
 
-        self.data = np.array(aux_data[:int(self.sr*self.duration)])
+        self.data = aux_data#np.array(aux_data[:int(self.sr*self.duration)])
     
     def set_channel(self, channel):
         self.channel = self.audioinstance.setChannel(channel)

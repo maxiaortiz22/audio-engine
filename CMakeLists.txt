@@ -14,6 +14,7 @@ add_library(AudioEngine SHARED STATIC
     src/AudioExceptions.cpp
     src/Noise.cpp
     src/PureTone.cpp
+    src/PulseTone.cpp
     src/WarbleTone.cpp
     src/ButterworthFilter.cpp
     src/LibKissFFT/kiss_fft.c

@@ -15,7 +15,6 @@ public:
     using AudioEngine::AudioEngine; // Inherit constructors
     void genSignal() override { PYBIND11_OVERRIDE_PURE(void, AudioEngine, genSignal, ); }
     float genSample() override { PYBIND11_OVERRIDE_PURE(float, AudioEngine, genSample, ); }
-    void setGain(float gain) override { PYBIND11_OVERRIDE_PURE(void, AudioEngine, setGain, gain); }
 };
 
 class PyPureTone : public PureTone {
@@ -23,7 +22,6 @@ public:
     using PureTone::PureTone; // Inherit constructors
     void genSignal() override { PYBIND11_OVERRIDE(void, PureTone, genSignal, ); }
     float genSample() override { PYBIND11_OVERRIDE(float, PureTone, genSample, ); }
-    void setGain(float gain) override { PYBIND11_OVERRIDE(void, AudioEngine, setGain, gain); }
 };
 
 class PyNoise : public Noise {
@@ -64,6 +62,9 @@ PYBIND11_MODULE(audio_engine, m) {
         .def("genSignal", &AudioEngine::genSignal)
         .def("genSample", &AudioEngine::genSample)
         //.def_property("channel", &AudioEngine::getChannel, &AudioEngine::setChannel)
+        .def("signalEmissionEnabled", &AudioEngine::signalEmissionEnabled)
+        .def("stopEmission", &AudioEngine::stopEmission)
+        .def("isBypassed", &AudioEngine::isBypassed)
         .def("setChannel", &AudioEngine::setChannel)
         .def("getChannel", &AudioEngine::getChannel)
         .def_property_readonly("getData", [](const AudioEngine &self) {
@@ -73,8 +74,11 @@ PYBIND11_MODULE(audio_engine, m) {
             std::memcpy(out.mutable_data(), data_ptr, buffer * 2 * sizeof(float));
             return out;
         })
+        .def("getBufferSize", &AudioEngine::getBufferSize)
         .def("getSampleRate", &AudioEngine::getSampleRate)
         .def("setGain", &AudioEngine::setGain)
+        .def("getGainIncrement", &AudioEngine::getGainIncrement)
+        .def("applyGain", &AudioEngine::applyGain)
         .def("freeBuffer", &AudioEngine::freeBuffer)
         .def("setSampleInBuffer", &AudioEngine::setSampleInBuffer);
 
@@ -84,7 +88,6 @@ PYBIND11_MODULE(audio_engine, m) {
         .def("genSignal", &PureTone::genSignal)
         .def("genSample", &PureTone::genSample)
         //.def_property("freq", &PureTone::getFreq, &PureTone::setFreq)
-        .def("setGain", &PureTone::setGain)
         .def("setFreq", &PureTone::setFreq)
         .def("getFreq", &PureTone::getFreq);
 

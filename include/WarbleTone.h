@@ -20,7 +20,7 @@ public:
     WarbleTone(int sampleRate, int buffer);
 
     void genSignal() override;
-    float genSample() override;
+    void genSample() override;
     void setFreq(float freq);
     float getFreq();
     void setFm(float fm);

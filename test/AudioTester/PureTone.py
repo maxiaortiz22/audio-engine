@@ -23,7 +23,7 @@ class PureToneTest(Tester):
 
         #fig, (ax1, ax2) = plt.subplots(2)
 
-        signal = np.zeros(self.N)
+        #signal = np.zeros(self.N)
         for channel in [ChannelType.Left, ChannelType.Right]:
             self.set_channel(channel)
 
@@ -37,6 +37,10 @@ class PureToneTest(Tester):
                 #assert max(signal) > 1.0, f"The amplitude of {freq} is greater than 1.0: {max(signal)}"
                 #assert min(signal) > -1.0, f"The amplitude of {freq} is lower than 1.0: {min(signal)}"
                 print(' ', max(signal), min(signal))
+
+                #self.data = np.append(self.data, np.array([0,0,0,0,0,0,0,0]))
+
+                print(len(self.data))
 
                 plt.plot(self.data)
                 plt.show()

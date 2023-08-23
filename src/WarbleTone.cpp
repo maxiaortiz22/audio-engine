@@ -9,29 +9,53 @@ WarbleTone::WarbleTone(int sampleRate, int buffer) : AudioEngine(sampleRate, buf
     modulationIndex =  df / fm;
 }
 
-void WarbleTone::genSignal(){
+void WarbleTone::genSignal() {
 
-    // Substract 2PI to avoid large angles.
-    if (angle> 2.0 * M_PI) {
-        angle -= 2.0 * M_PI;
+    if (gainChanged){
+        WarbleTone::getGainIncrement();
     }
-    if (angleFm> 2.0 * M_PI) {
-        angleFm -= 2.0 * M_PI;
-    }
+    gainChanged = false;
 
-    //main working loop:
-    for (int idx = 0; idx < buffer*2; idx += 2) {
-        float sample = WarbleTone::genSample();
-        WarbleTone::setSampleInBuffer(sample, idx);
+    if (actualGain <= -130) {
+
+        for (int idx = 0; idx < buffer*2; idx += 2) {
+            sample = 0.0;
+            WarbleTone::setSampleInBuffer(sample, idx);
+        }
+
+        angle = 0.0;
+        angleFm = 0.0;
+        actualGain = -120;
+        enableBypass = false;
+        bypass = true;
+    }
+    else {
+
+         //main working loop:
+        for (int idx = 0; idx < buffer*2; idx += 2) {
+            WarbleTone::genSample();
+            WarbleTone::setSampleInBuffer(sample, idx);
+        }
+
     }
 }
 
-float WarbleTone::genSample(){
-    float sample = amplitude * sin(angle + modulationIndex*sin(angleFm));
+void WarbleTone::genSample() {
+
+    sample = sin(angle + modulationIndex*sin(angleFm));
     angle += offset;
     angleFm += offsetFm;
 
-    return sample;
+    WarbleTone::applyGain();
+
+    // Substract 2PI to avoid large angles.
+    if (angle > 2.0 * M_PI) {
+        angle -= 2.0 * M_PI;
+    }
+    if (angleFm > 2.0 * M_PI) {
+        angleFm -= 2.0 * M_PI;
+    }
+
 }
 
 void WarbleTone::setFreq(float freq) {
