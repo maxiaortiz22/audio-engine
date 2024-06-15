@@ -2,37 +2,47 @@
 #include "PureTone.h"
 #include <cmath>
 
-PureTone::PureTone(int sampleRate, int buffer) : AudioEngine(sampleRate, buffer) {
-    offset = 2 * M_PI * this->freq / (float) sampleRate;
+PureTone::PureTone(float sampleRate) : AudioEngine(sampleRate) {
+    offset = 2 * M_PI * this->freq / sampleRate;
+    samplesToStop = std::ceil(sampleRate*interval*std::pow(10, -3));
 }
 
-void PureTone::genSignal() {
+void PureTone::genSignal(float* data, int buffer) {
 
     if (gainChanged){
         PureTone::getGainIncrement();
     }
-    gainChanged = false;
 
-    if (actualGain <= -130) {
+    if (stopEmissionFlag) {
 
-        for (int idx = 0; idx < buffer*2; idx += 2) {
-            sample = 0.0;
-            PureTone::setSampleInBuffer(sample, idx);
+        if (samplesToStopCounter >= samplesToStop){
+            for (int idx = 0; idx < buffer; idx += 2) {
+                sample = 0.0;
+                PureTone::setSampleInBuffer(data, sample, idx);
+            }
+
+            angle = 0.0;
+            actualGain = -120;
+            bypass = true;
+            stopEmissionFlag = false;
+            samplesToStopCounter = 0;
         }
 
-        angle = 0.0;
-        actualGain = -120;
-        enableBypass = false;
-        bypass = true;
+        else {
+            for (int idx = 0; idx < buffer; idx += 2) {
+                PureTone::genSample();
+                PureTone::setSampleInBuffer(data, sample, idx);
+                samplesToStopCounter++;
+            }
+        }
     }
     else {
 
-         //main working loop:
-        for (int idx = 0; idx < buffer*2; idx += 2) {
+        //main working loop:
+        for (int idx = 0; idx < buffer; idx += 2) {
             PureTone::genSample();
-            PureTone::setSampleInBuffer(sample, idx);
+            PureTone::setSampleInBuffer(data, sample, idx);
         }
-
     }
 }
 
@@ -51,7 +61,7 @@ void PureTone::genSample() {
 
 void PureTone::setFreq(float freq) {
     this->freq = freq;
-    offset = 2 * M_PI * freq / (float) sampleRate;
+    offset = 2 * M_PI * freq / sampleRate;
 }
 
 float PureTone::getFreq() {

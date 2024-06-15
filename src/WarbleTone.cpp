@@ -2,39 +2,49 @@
 #include "WarbleTone.h"
 #include <cmath>
 
-WarbleTone::WarbleTone(int sampleRate, int buffer) : AudioEngine(sampleRate, buffer) {
-    offset = 2 * M_PI * this->freq / (float) sampleRate;
-    offsetFm = 2.0 * M_PI * fm / (float) sampleRate;
+WarbleTone::WarbleTone(float sampleRate) : AudioEngine(sampleRate) {
+    offset = 2 * M_PI * this->freq / sampleRate;
+    offsetFm = 2.0 * M_PI * fm / sampleRate;
     df = freq*(deviation/(100*2));
     modulationIndex =  df / fm;
+    samplesToStop = std::ceil(sampleRate*interval*std::pow(10, -3));
 }
 
-void WarbleTone::genSignal() {
+void WarbleTone::genSignal(float* data, int buffer) {
 
     if (gainChanged){
         WarbleTone::getGainIncrement();
     }
-    gainChanged = false;
 
-    if (actualGain <= -130) {
+    if (stopEmissionFlag) {
 
-        for (int idx = 0; idx < buffer*2; idx += 2) {
-            sample = 0.0;
-            WarbleTone::setSampleInBuffer(sample, idx);
+        if (samplesToStopCounter >= samplesToStop){
+            for (int idx = 0; idx < buffer; idx += 2) {
+                sample = 0.0;
+                WarbleTone::setSampleInBuffer(data, sample, idx);
+            }
+
+            angle = 0.0;
+            actualGain = -120;
+            bypass = true;
+            stopEmissionFlag = false;
+            samplesToStopCounter = 0;
         }
 
-        angle = 0.0;
-        angleFm = 0.0;
-        actualGain = -120;
-        enableBypass = false;
-        bypass = true;
+        else {
+            for (int idx = 0; idx < buffer; idx += 2) {
+                WarbleTone::genSample();
+                WarbleTone::setSampleInBuffer(data, sample, idx);
+                samplesToStopCounter++;
+            }
+        }
     }
     else {
 
-         //main working loop:
-        for (int idx = 0; idx < buffer*2; idx += 2) {
+        //main working loop:
+        for (int idx = 0; idx < buffer; idx += 2) {
             WarbleTone::genSample();
-            WarbleTone::setSampleInBuffer(sample, idx);
+            WarbleTone::setSampleInBuffer(data, sample, idx);
         }
 
     }
@@ -60,7 +70,7 @@ void WarbleTone::genSample() {
 
 void WarbleTone::setFreq(float freq) {
     this->freq = freq;
-    offset = 2 * M_PI * this->freq / (float) sampleRate;
+    offset = 2 * M_PI * this->freq / sampleRate;
     angle = 0.0;
     angleFm = 0.0;
     df = this->freq*(deviation/(100*2));
@@ -73,7 +83,7 @@ float WarbleTone::getFreq(){
 
 void WarbleTone::setFm(float fm) {
     this->fm = fm;
-    this->offsetFm = 2.0 * M_PI * this->fm / (float) sampleRate;
+    this->offsetFm = 2.0 * M_PI * this->fm / sampleRate;
     angle = 0.0;
     angleFm = 0.0;
     df = freq*(deviation/(100*2));

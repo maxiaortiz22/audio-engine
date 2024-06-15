@@ -19,4 +19,9 @@ public:
     UnknownGainException(const std::string& message);
 };
 
+class UnknownIntervalException : public std::runtime_error {
+public:
+    UnknownIntervalException(const std::string& message);
+};
+
 #endif  // AUDIOEXCEPTIONS_H

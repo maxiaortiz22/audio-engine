@@ -1,6 +1,6 @@
-^C:\USERS\MAXIA\ONEDRIVE\DESKTOP\USOUND\AUDIO-ENGINE\CMAKELISTS.TXT
+^C:\USERS\MAXIA\ONEDRIVE\DESKTOP\USOUND\PUBLICAUDIOENGINE\AUDIO-ENGINE\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/maxia/OneDrive/Desktop/uSound/audio-engine -BC:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/build --check-stamp-file C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine -BC:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/build --check-stamp-file C:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

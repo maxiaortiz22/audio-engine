@@ -17,9 +17,9 @@ private:
     float angleFm = 0.0;
 
 public:
-    WarbleTone(int sampleRate, int buffer);
+    WarbleTone(float sampleRate);
 
-    void genSignal() override;
+    void genSignal(float* data, int buffer) override;
     void genSample() override;
     void setFreq(float freq);
     float getFreq();

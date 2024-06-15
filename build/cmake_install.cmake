@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine
+# Install script for directory: C:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -11,9 +11,9 @@ private:
     float angle = 0.0;
 
 public:
-    PureTone(int sampleRate, int buffer);
+    PureTone(float sampleRate);
 
-    void genSignal() override;
+    void genSignal(float* data, int buffer) override;
     void genSample() override;
     void setFreq(float freq);
     float getFreq();

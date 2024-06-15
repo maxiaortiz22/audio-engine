@@ -287,7 +287,7 @@ PYBIND11_SIMPLE_GIL_MANAGEMENT:BOOL=OFF
 PYBIND11_TEST:BOOL=OFF
 
 //Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=C:/Users/maxia/anaconda3/python.exe
+PYTHON_EXECUTABLE:FILEPATH=C:/Users/maxia/anaconda3/envs/audio-dev/python.exe
 
 //Value Computed by CMake
 pybind11_BINARY_DIR:STATIC=C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/pybind11
@@ -462,23 +462,24 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PYTHON
-FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=C:/Users/maxia/anaconda3/python.exe3.9.13
+FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=C:/Users/maxia/anaconda3/envs/audio-dev/python.exe3.11.5
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Users/maxia/anaconda3/python.exe][v3.9.13(3.6)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Users/maxia/anaconda3/envs/audio-dev/python.exe][v3.11.5(3.6)]
 //Test HAS_MSVC_GL_LTCG
 HAS_MSVC_GL_LTCG:INTERNAL=1
 PYBIND11_INCLUDE_DIR:INTERNAL=C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/pybind11/include
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
-PYTHON_INCLUDE_DIRS:INTERNAL=C:/Users/maxia/anaconda3/include
+PYTHON_INCLUDE_DIRS:INTERNAL=C:/Users/maxia/anaconda3/envs/audio-dev/Include
 PYTHON_IS_DEBUG:INTERNAL=0
-PYTHON_LIBRARIES:INTERNAL=C:/Users/maxia/anaconda3/libs/python39.lib
-PYTHON_MODULE_EXTENSION:INTERNAL=.cp39-win_amd64.pyd
+PYTHON_LIBRARIES:INTERNAL=C:/Users/maxia/anaconda3/envs/audio-dev/libs/python311.lib
+PYTHON_MODULE_DEBUG_POSTFIX:INTERNAL=
+PYTHON_MODULE_EXTENSION:INTERNAL=.cp311-win_amd64.pyd
 PYTHON_MODULE_PREFIX:INTERNAL=
-PYTHON_VERSION:INTERNAL=3.9.13
+PYTHON_VERSION:INTERNAL=3.11.5
 PYTHON_VERSION_MAJOR:INTERNAL=3
-PYTHON_VERSION_MINOR:INTERNAL=9
-Python_ADDITIONAL_VERSIONS:INTERNAL=3.11;3.10;3.9;3.8;3.7;3.6
+PYTHON_VERSION_MINOR:INTERNAL=11
+Python_ADDITIONAL_VERSIONS:INTERNAL=3.12;3.11;3.10;3.9;3.8;3.7;3.6
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/AudioTest
 _Python:INTERNAL=PYTHON
@@ -487,5 +488,5 @@ pybind11_FOUND:INTERNAL=TRUE
 //Directory where pybind11 headers are located
 pybind11_INCLUDE_DIR:INTERNAL=C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/pybind11/include
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/pybind11/include;C:/Users/maxia/anaconda3/include
+pybind11_INCLUDE_DIRS:INTERNAL=C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/pybind11/include;C:/Users/maxia/anaconda3/envs/audio-dev/Include
 

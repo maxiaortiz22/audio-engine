@@ -1,37 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\AudioEngine.cpp">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\AudioEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\AudioExceptions.cpp">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\AudioExceptions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\Noise.cpp">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\PureTone.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\PureTone.cpp">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\PulseTone.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\WarbleTone.cpp">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\WarbleTone.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\ButterworthFilter.cpp">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\ToneGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\LibKissFFT\kiss_fft.c">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\Noise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\src\LibKissFFT\kiss_fftr.c">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\frequency_cut.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\filter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\src\NoiseGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{E0A2D8E2-6E59-3D83-8307-803F856C4F1A}</UniqueIdentifier>
+      <UniqueIdentifier>{F8E49329-D6BB-3855-A938-477792615A99}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

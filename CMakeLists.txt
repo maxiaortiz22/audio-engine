@@ -12,13 +12,14 @@ project(AudioEngine)
 add_library(AudioEngine SHARED STATIC
     src/AudioEngine.cpp
     src/AudioExceptions.cpp
-    src/Noise.cpp
     src/PureTone.cpp
     src/PulseTone.cpp
     src/WarbleTone.cpp
-    src/ButterworthFilter.cpp
-    src/LibKissFFT/kiss_fft.c
-    src/LibKissFFT/kiss_fftr.c
+    src/ToneGenerator.cpp
+    src/Noise.cpp
+    src/frequency_cut.c
+    src/filter.c
+    src/NoiseGenerator.cpp
 )
 
 # Establece los directorios de inclusión de la biblioteca

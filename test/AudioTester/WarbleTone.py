@@ -1,16 +1,18 @@
-from Tester import Tester
+from Tester import ToneTester
 from progress.bar import IncrementalBar
-from audio_engine import WarbleTone, ChannelType
-from scipy.fft import rfft, rfftfreq
-from scipy.signal import butter, sosfilt, find_peaks
+import audio_engine
+#from scipy.fft import rfft, rfftfreq
+#from scipy.signal import butter, sosfilt, find_peaks
 import numpy as np
 from statistics import mode
 import pandas as pd
+import matplotlib.pyplot as plt
 
-class WarbleToneTest(Tester):
+class WarbleToneTest(ToneTester):
 
-    def __init__(self, sr, buffer, audioclass=WarbleTone):
-        super().__init__(sr, buffer, audioclass)
+    def __init__(self, sr, buffer):
+        super().__init__(sr, buffer)
+        audio_engine.tone_generator_setValue(audio_engine.ToneGenParam.TG_TONE_TYPE, audio_engine.ToneType.WARBLE_TONE)
         self.bands = [125, 250, 500, 750, 1000, 1500, 2000, 3000, 4000, 6000, 8000]
         self.order = 4
         self.result = {'Carrier frequency [Hz]': [],
@@ -21,19 +23,23 @@ class WarbleToneTest(Tester):
 
         bar = IncrementalBar('Warble tone test', max = len(self.bands)*2)
         
-        for channel in [ChannelType.Left, ChannelType.Right]:
+        for channel in [audio_engine.ChannelType.LEFT_CHANNEL, audio_engine.ChannelType.RIGHT_CHANNEL]:
             self.set_channel(channel)
 
             for freq in self.bands:
-                self.audioinstance.setFreq(freq)
+                audio_engine.tone_generator_setValue(audio_engine.ToneGenParam.TG_FREQ, freq)
                 self.gen_data()
-                #self.play_data()}
-                
-                fm, fc = self.get_frec_mod(self.data, freq)
+                print(np.min(self.tone), np.max(self.tone))
+                #self.play_data()
 
-                self.result['Carrier frequency [Hz]'].append(fc)
-                self.result['Modulating frequency [Hz]'].append(fm)
-                self.result['Channel'].append(channel)
+                plt.plot(self.tone)
+                plt.show()
+                
+                #fm, fc = self.get_frec_mod(self.data, freq)
+
+                #self.result['Carrier frequency [Hz]'].append(fc)
+                #self.result['Modulating frequency [Hz]'].append(fm)
+                #self.result['Channel'].append(channel)
 
                 bar.next()
         bar.finish()
@@ -42,6 +48,7 @@ class WarbleToneTest(Tester):
 
         print(df)
     
+    """
     def filter_signal(self, data, band):
 
         order = self.order
@@ -54,6 +61,7 @@ class WarbleToneTest(Tester):
         filtered_audio = sosfilt(sos, data)
 
         return filtered_audio
+    
     
     def get_frec_mod(self, data, band):
 
@@ -83,3 +91,4 @@ class WarbleToneTest(Tester):
         fc = band
 
         return fm, fc
+        """

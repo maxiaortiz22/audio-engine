@@ -2,54 +2,58 @@
 #define AUDIOENGINE_H
 
 #include "AudioExceptions.h"
+#include "usoundlib_params.h"
 #include "db.h"
-
-enum class ChannelType {
-    Left,
-    Right,
-    Stereo
-};
 
 class AudioEngine{
 
 protected:
-    int sampleRate;
+    float sampleRate;
     int buffer;
-    float* data;
     float sample = 0.0;
     bool bypass;
-    bool enableBypass;
     ChannelType channel;
     //Gain management:
     float gain;
-    float actualGain = -120;
+    float actualGain = -120.0;
     int increaseGain = 1;
     float gainIncrement;
-    float interval = 60; //time in ms to reach the desired gain.
+    float interval = 150;
     float intervalGain;
     bool gainChanged = true;
+    bool stopEmissionFlag = false;
+    int samplesToStop = 0;
+    int samplesToStopCounter = 0;
+    float intercomVolume = 10;
+    bool secondGenerator = false;
 
 
 public:
-    AudioEngine(int sampleRate, int buffer); //Constructor
-    virtual ~AudioEngine();
+    AudioEngine(float sampleRate); //Constructor
 
-    virtual void genSignal() = 0;
+    virtual void genSignal(float* data, int buffer) = 0;
     virtual void genSample() = 0;
 
     void signalEmissionEnabled();
-    void stopEmission();
+    virtual void stopEmission();
     bool isBypassed();
     void setChannel(ChannelType Channel);
     ChannelType getChannel() const;
-    float* getData() const;
     int getBufferSize() const;
-    int getSampleRate() const;
-    void setGain(float gain);
-    void getGainIncrement();
-    void applyGain();
-    void freeBuffer();
-    void setSampleInBuffer(float sample, int index);
+    float getSampleRate() const;
+    virtual void setGain(float gain);
+    float getGain();
+    void setInitGain(float actualGain);
+    float getInitGain();
+    void setInterval(float interval);
+    float getInterval();
+    virtual void getGainIncrement();
+    virtual void applyGain();
+    void setSampleInBuffer(float *data, float sample, int index);
+    void setIntercomVolume(float intercomVolume);
+    float getIntercomVolume();
+    void setSecondGenerator(bool secondGenerator);
+    bool isSecondGenerator();
 };
 
 #endif //AUDIOENGINE_H

@@ -3,24 +3,66 @@
 
 #include "AudioEngine.h"
 
+enum class PulseState {
+    rise,
+    on,
+    fall,
+    off
+};
+
+enum class GainIncrementCase {
+    rise,
+    fall,
+    firstPulse,
+    stop,
+    none
+};
+
 class PulseTone : public AudioEngine {
 
-private:
+protected:
+    //Tone values
     float freq = 1000.0;
     float offset;
     float angle = 0.0;
-    int riseTime = 35;
-    int fallTime = 35;
-    int onTime = 150;
-    int offTime = 175;
+    //Pulse time values
+    int riseTime = 110;
+    int fallTime = 110;
+    int onTime = 170;
+    int offTime = 40;
+    int stopTime = 150;
+    //Gain management values
+    PulseState pulseState = PulseState::rise;
+    int pulseGainVariation = 70;
+    int pulseGainOppositeLimit = -120;
+    int samplesCount = 0;
+    int samplesToStopCounter = 0;
+    int riseSamples;
+    int fallSamples;
+    int onSamples;
+    int offSamples;
+    float pulseGain;
+    bool pulseGainFlag;
+    bool firstPulseFlag;
+    bool gainIncreased;
+    int samplesToStop;
+
+
 
 public:
-    PulseTone(int sampleRate, int buffer);
+    PulseTone(float sampleRate);
 
-    void genSignal() override;
+    void genSignal(float* data, int buffer) override;
     void genSample() override;
+    void setGain(float gain) override;
+    void stopEmission() override;
+    void applyGain() override;
     void setFreq(float freq);
     float getFreq();
+    void setStateFromSamplesCount();
+    void setIntervalPerState();
+    void getGainIncrement() override;
+    GainIncrementCase gainIncrementCases();
 
 };
 

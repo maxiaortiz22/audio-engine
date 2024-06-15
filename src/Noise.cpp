@@ -1,134 +1,151 @@
 #include "Noise.h"
 #include <iostream>
 
-Noise::Noise(int sampleRate, int buffer) : AudioEngine(sampleRate, buffer), generator(std::random_device()()), distribution(-1.0f, 1.0f) {
-    auxBuffer = std::vector<float>(buffer);
-    filteredSignal = std::vector<float>(buffer);
+Noise::Noise(int sampleRate) : AudioEngine(sampleRate), generator(std::random_device()()), distribution(-1.0f, 1.0f) {
+    noiseType = WHITE_NOISE;
+    Noise::setNoiseByType();
+    samplesToStop = std::ceil(sampleRate*interval*std::pow(10, -3));
 }
 
-void Noise::genSignal() {
+void Noise::genSignal(float* data, int buffer) {
 
-    for (int i = 0; i < auxBuffer.size(); i++) {
-        float sample = Noise::genSample();
-        auxBuffer[i] = sample;
+    if (gainChanged){
+        Noise::getGainIncrement();
     }
 
-    if (noiseType == NoiseType::White){
-        filteredSignal = auxBuffer;
-    }
+    if (stopEmissionFlag) {
 
+        if (samplesToStopCounter >= samplesToStop){
+            for (int idx = 0; idx < buffer; idx += 2) {
+                sample = 0.0;
+                Noise::setSampleInBuffer(data, sample, idx);
+            }
+
+            actualGain = -120;
+            bypass = true;
+            stopEmissionFlag = false;
+            samplesToStopCounter = 0;
+        }
+
+        else {
+            for (int idx = 0; idx < buffer; idx += 2) {
+                Noise::genSample();
+                Noise::setSampleInBuffer(data, sample, idx);
+                samplesToStopCounter++;
+            }
+            Noise::filterSignal(data, buffer);
+        }
+    }
     else {
-        Noise::filterSignal(auxBuffer);
-    }
-    
-    //main working loop:
-    int i;
-    for (int idx = 0; idx < buffer*2; idx += 2) {
-        i = idx/2;
-        float sample = filteredSignal[i];
-        Noise::setSampleInBuffer(sample, idx);
+
+        //main working loop:
+        for (int idx = 0; idx < buffer; idx += 2) {
+            Noise::genSample();
+            Noise::setSampleInBuffer(data, sample, idx);
+        }
+        Noise::filterSignal(data, buffer);
     }
 }
 
-float Noise::genSample() {
-   return amplitude * distribution(generator);
+void Noise::genSample() {
+    sample = distribution(generator);
+    Noise::applyGain();
 }
 
-void Noise::setNoiseType(NoiseType noiseType, float freq) {
+void Noise::filterSignal(float* data, int buffer){
+    switch (noiseType){
+        case WHITE_NOISE:
+            break;
+        case NARROW_BAND_WHITE_NOISE:
+            frequency_cut_process(data, buffer);
+            break;
+        case  PINK_NOISE :
+            //low_pass_process(data, buffer, channel);
+            frequency_cut_process(data, buffer);
+            break;
+        case NARROW_BAND_PINK_NOISE:
+            frequency_cut_process(data, buffer);
+            break;
+        case SPEECH_TEST_WHITE_NOISE :
+            frequency_cut_process(data, buffer);
+            break;
+        default:
+            break;
+    }
+}
+
+void Noise::setNarrowBandFc(){
+    if (noiseTypeBypass){
+        frequency_cut_setValue(FC_BYPASS, 1);
+    }
+    else {
+        float highPassFreq = fabs(static_cast<float>(freqBand) / pow(2.0f, 0.16666f));
+        float lowPassFreq = fabs(static_cast<float>(freqBand) * pow(2.0f, 0.16666f));
+        frequency_cut_setValue(FC_LOWPASS + FC_FILTER_TYPE, F_LPF_ORDER_2);
+        frequency_cut_setValue(FC_HIGHPASS + FC_FILTER_TYPE, F_HPF_ORDER_2);
+
+        frequency_cut_setValue(FC_LOWPASS + FC_FILTER_FREQ, lowPassFreq);
+        frequency_cut_setValue(FC_HIGHPASS + FC_FILTER_FREQ, highPassFreq);
+        frequency_cut_setValue(FC_CHANNEL_TYPE, static_cast<float>(channel));
+
+        frequency_cut_setValue(FC_HIGHPASS + FC_FILTER_ENABLED, 1);
+        frequency_cut_setValue(FC_LOWPASS + FC_FILTER_ENABLED, 1);
+
+        frequency_cut_setValue(FC_BYPASS, 0);
+    }
+}
+
+void Noise::setFreqBand(int freqBand){
+    this->freqBand = freqBand;
+    Noise::setNoiseByType();
+}
+
+int Noise::getFreqBand(){
+    return freqBand;
+}
+
+void Noise::setNoiseType(NoiseType noiseType){
     this->noiseType = noiseType;
-    this->freq = freq;
-
-    switch (noiseType) {
-
-    case NoiseType::White:
-        printf("Seteo ruido blanco\n");
-        break;
-
-    case NoiseType::Pink:
-
-        printf("Seteo ruido rosa\n");
-
-        //Defining filter characteristics:
-        N = 1;
-        btype = FilterType::Lowpass;
-        fc = {20};
-
-        //Get the filter coefficients:
-        coeff = butter(N, fc, btype, analog, AudioEngine::sampleRate);
-        std::tie(b, a) = coeff;
-
-        //Print coefficients:
-        std::cout<< "b: [";
-        for(auto coeff : b){
-            std::cout<<coeff<<", ";
-        }
-        std::cout<< "]"<< std::endl;
-
-        std::cout<< "a: [";
-        for(auto coeff : a){
-            std::cout<<coeff<<", ";
-        }
-        std::cout<< "]"<< std::endl;
-
-
-        break;
-
-    case NoiseType::NBN:
-
-        printf("Seteo ruido NBN\n");
-
-        //Defining filter characteristics:
-        N = 2;
-        btype = FilterType::Bandpass;
-        lowcut = freq / sqrt(2);
-        highcut = freq * sqrt(2);
-        fc = {lowcut, highcut};
-
-        //Get the filter coefficients:
-        coeff = butter(N, fc, btype, analog, AudioEngine::sampleRate);
-        std::tie(b, a) = coeff;
-
-        //Print coefficients:
-        std::cout<< "b: [";
-        for(auto coeff : b){
-            std::cout<<coeff<<", ";
-        }
-        std::cout<< "]"<< std::endl;
-
-        std::cout<< "a: [";
-        for(auto coeff : a){
-            std::cout<<coeff<<", ";
-        }
-        std::cout<< "]"<< std::endl;
-
-        break;
-    
-    default:
-        throw UnknownNoiseTypeException("Unknown type of noise.");
-    }
+    Noise::setNoiseByType();
 }
 
-void Noise::filterSignal(std::vector<float> signal) {
+NoiseType Noise::getNoiseType(){
+    return noiseType;
+}
 
-    for (int n = 0; n < signal.size(); n++){
-        filteredSignal[n] = b[0] * signal[n];
-
-        for (int i = 1; i < b.size(); i++){
-            if (n>=i){
-                filteredSignal[n] += b[i] * signal[n-i];
-            }
-            else{
-                break;
-            }
-        }
-
-        for (int i = 1; i < a.size(); i++){
-            if (n>0 && n>=i){
-                filteredSignal[n] -= a[i]*filteredSignal[n-i];
-            }
-            else{
-                break;
-            }
-        }
+void Noise::setNoiseByType(){
+    switch (noiseType){
+        case WHITE_NOISE:
+            noiseTypeBypass = true;
+            Noise::setNarrowBandFc();
+            break;
+        case PINK_NOISE:
+            noiseTypeBypass = true;
+            Noise::setNarrowBandFc();
+            frequency_cut_setValue(FC_LOWPASS + FC_FILTER_FREQ, (float)  20);
+            frequency_cut_setValue(FC_LOWPASS + FC_FILTER_TYPE, F_LPF_ORDER_1);
+            frequency_cut_setValue(FC_LP_BYPASS, 0);
+            break;
+        case NARROW_BAND_PINK_NOISE:
+            frequency_cut_setValue(FC_LOWPASS + FC_FILTER_FREQ, (float)  20);
+            frequency_cut_setValue(FC_LOWPASS + FC_FILTER_TYPE, F_LPF_ORDER_1);
+            noiseTypeBypass = false;
+            Noise::setNarrowBandFc();
+            break;
+        case NARROW_BAND_WHITE_NOISE:
+            noiseTypeBypass = false;
+            Noise::setNarrowBandFc();
+            break;
+        case SPEECH_TEST_WHITE_NOISE:
+            noiseTypeBypass = true;
+            Noise::setNarrowBandFc();
+            frequency_cut_setValue(FC_LOWPASS + FC_FILTER_FREQ, (float) 1000);
+            frequency_cut_setValue(FC_LOWPASS + FC_FILTER_TYPE, F_LPF_ORDER_2);
+            frequency_cut_setValue(FC_LP_BYPASS, 0);
+            break;
+        default:
+            noiseTypeBypass = true;
+            Noise::setNarrowBandFc();
+            break;
     }
 }

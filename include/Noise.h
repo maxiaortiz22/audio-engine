@@ -3,46 +3,35 @@
 
 #include "AudioEngine.h"
 #include <random>
-#include "AudioExceptions.h"
-#include "ButterworthFilter.h"
-#include <vector>
-#include <tuple>
+#include "frequency_cut.h"
+#include "db.h"
+#include "filter.h"
+#include "engine_params.h"
 
-enum class NoiseType {
-    White,
-    Pink,
-    NBN
-};
-
-class Noise : public AudioEngine {
+class Noise : public AudioEngine{
 private:
-    //White noise:
+    //Generator parameters:s
     std::default_random_engine generator;
     std::uniform_real_distribution<float> distribution;
-    NoiseType noiseType = NoiseType::White;
-    //Pink noise:
-    std::vector<float> auxBuffer;
-    std::vector<float> filteredSignal;
-    std::tuple<std::vector<double>, std::vector<double>> coeff;
-    std::vector<double> b; //b filter coefficients
-    std::vector<double> a; //a filter coefficients
-    bool analog = false; //Set a digital filter
-    std::vector<double> fc; //Cut-off frequency
-    int N; //Order of the filter
-    FilterType btype; //Type of filter
-    //NBN:
-    float freq;
-    double lowcut;
-    double highcut;
+    NoiseType noiseType;
+    int freqBand;
+    bool noiseTypeBypass;
 
 public:
-    Noise(int sampleRate, int buffer);
+    Noise(int sampleRate);
 
-    void genSignal() override;
-    float genSample() override;
-    void setNoiseType(NoiseType type, float freq = 1000.0);
-    void filterSignal(std::vector<float> signal);
+    void genSignal(float *data, int buffer) override;
+    void genSample() override;
+    void filterSignal(float* data, int buffer);
+    void setNarrowBandFc();
+    void setNoiseByType();
+    void setNoiseType(NoiseType noiseType);
+    NoiseType getNoiseType();
+    void setFreqBand(int freqBand);
+    int getFreqBand();
+
+    //REESCRIBIR GETTER Y SETTER DEL GAIN
 
 };
 
-#endif //NOISE_H
+#endif // NOISE_H
