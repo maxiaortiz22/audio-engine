@@ -9,16 +9,16 @@ from NBN import NBNTest
 def run(sr, buffer):
 
     #Test Pure Tone:
-    pure_tone = PureToneTest(sr, buffer)
-    pure_tone.test()
+    #pure_tone = PureToneTest(sr, buffer)
+    #pure_tone.test()
 
     #Test Pulse Tone:
     pulse_tone = PulseToneTest(sr, buffer)
     pulse_tone.test()
 
     #Test Warble Tone:
-    warble_tone = WarbleToneTest(sr, buffer)
-    warble_tone.test()
+    #warble_tone = WarbleToneTest(sr, buffer)
+    #warble_tone.test()
 
     #Test White Noise:
     #white_noise = WhiteNoiseTest(sr, buffer)

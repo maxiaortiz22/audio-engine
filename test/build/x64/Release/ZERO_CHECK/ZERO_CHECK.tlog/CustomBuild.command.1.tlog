@@ -1,6 +1,6 @@
-^C:\USERS\MAXIA\ONEDRIVE\DESKTOP\USOUND\AUDIO-ENGINE\TEST\BUILD\CMAKEFILES\95122C9A30B99C191078E0089E676480\GENERATE.STAMP.RULE
+^C:\USERS\MAXIA\ONEDRIVE\DESKTOP\USOUND\PUBLICAUDIOENGINE\AUDIO-ENGINE\TEST\BUILD\CMAKEFILES\C8CF5AF154124C6F3FDDFBDC5E12A998\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test -BC:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/AudioTest.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/test -BC:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/test/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/test/build/AudioTest.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

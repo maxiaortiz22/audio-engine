@@ -7,7 +7,7 @@ class ToneTester():
     def __init__(self, sr, buffer):
         self.sr = sr
         self.buffer = buffer
-        self.duration = 2
+        self.duration = 5
         self.gain = 0
         self.data = np.zeros(self.buffer, dtype=np.float32)
         self.tone = np.array([])
@@ -22,21 +22,7 @@ class ToneTester():
         audio_engine.tone_generator_setValue(audio_engine.ToneGenParam.TG_GAIN, self.gain)
         audio_engine.tone_generator_setValue(audio_engine.ToneGenParam.TG_BYPASS, 0)
         
-        for _ in range(int(iteration/3)):
-            audio_engine.tone_generator_interval_process(self.data, self.buffer)
-            #print(type(self.data.flatten()))
-            self.tone = np.append(self.tone, self.data.flatten())
-
-        audio_engine.tone_generator_setValue(audio_engine.ToneGenParam.TG_GAIN, self.gain - 5)
-
-        for _ in range(int(iteration/3)):
-            audio_engine.tone_generator_interval_process(self.data, self.buffer)
-            #print(type(self.data.flatten()))
-            self.tone = np.append(self.tone, self.data.flatten())
-
-        audio_engine.tone_generator_setValue(audio_engine.ToneGenParam.TG_GAIN, self.gain - 2)
-
-        for _ in range(int(iteration/3)):
+        for _ in range(int(iteration)):
             audio_engine.tone_generator_interval_process(self.data, self.buffer)
             #print(type(self.data.flatten()))
             self.tone = np.append(self.tone, self.data.flatten())

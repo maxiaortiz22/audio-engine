@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/pybind11
+# Install script for directory: C:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/test/pybind11
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

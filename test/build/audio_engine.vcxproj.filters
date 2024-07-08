@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\test\bindings.cpp">
+    <ClCompile Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\test\bindings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\test\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\test\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{6F058151-E027-3BDF-BB46-505F8486778F}</UniqueIdentifier>
+      <UniqueIdentifier>{936E5BE6-E049-3634-B38F-0C34146ADE10}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

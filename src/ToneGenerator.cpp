@@ -484,16 +484,14 @@ extern "C" void update_tone_generator_params() {
                 if (pToneGen->pulseTone->getFreq() != pToneGen->freq) { pToneGen->pulseTone->setFreq(pToneGen->freq); }
                 if (pToneGen->pulseTone->getChannel() != pToneGen->pan) { pToneGen->pulseTone->setChannel(pToneGen->pan); }
                 if (pToneGen->pulseTone->getGain() != pToneGen->gain) { pToneGen->pulseTone->setGain(pToneGen->gain); }
-                if (pToneGen->pulseTone->getInitGain() != pToneGen->initGain) { pToneGen->pulseTone->setInitGain(pToneGen->initGain); }
-                if (pToneGen->pulseTone->getInterval() != pToneGen->interval) { pToneGen->pulseTone->setInterval(pToneGen->interval); }
+                //if (pToneGen->pulseTone->getInitGain() != pToneGen->initGain) { pToneGen->pulseTone->setInitGain(pToneGen->initGain); }
                 if (pToneGen->pulseTone->getIntercomVolume() != pToneGen->intercomVolume) { pToneGen->pulseTone->setIntercomVolume(pToneGen->intercomVolume); }
                 break;
             case PULSE_TONE_ONE_SEC:
                 if (pToneGen->pulseTone->getFreq() != pToneGen->freq) { pToneGen->pulseTone->setFreq(pToneGen->freq); }
                 if (pToneGen->pulseTone->getChannel() != pToneGen->pan) { pToneGen->pulseTone->setChannel(pToneGen->pan); }
                 if (pToneGen->pulseTone->getGain() != pToneGen->gain) { pToneGen->pulseTone->setGain(pToneGen->gain); }
-                if (pToneGen->pulseTone->getInitGain() != pToneGen->initGain) { pToneGen->pulseTone->setInitGain(pToneGen->initGain); }
-                if (pToneGen->pulseTone->getInterval() != pToneGen->interval) { pToneGen->pulseTone->setInterval(pToneGen->interval); }
+                //if (pToneGen->pulseTone->getInitGain() != pToneGen->initGain) { pToneGen->pulseTone->setInitGain(pToneGen->initGain); }
                 if (pToneGen->pulseTone->getIntercomVolume() != pToneGen->intercomVolume) { pToneGen->pulseTone->setIntercomVolume(pToneGen->intercomVolume); }
                 break;
             case WARBLE_TONE:
@@ -529,16 +527,14 @@ extern "C" void update_second_tone_generator_params() {
                 if (pToneGen2->pulseTone->getFreq() != pToneGen2->freq) { pToneGen2->pulseTone->setFreq(pToneGen2->freq); }
                 if (pToneGen2->pulseTone->getChannel() != pToneGen2->pan) { pToneGen2->pulseTone->setChannel(pToneGen2->pan); }
                 if (pToneGen2->pulseTone->getGain() != pToneGen2->gain) { pToneGen2->pulseTone->setGain(pToneGen2->gain); }
-                if (pToneGen2->pulseTone->getInitGain() != pToneGen2->initGain) { pToneGen2->pulseTone->setInitGain(pToneGen2->initGain); }
-                if (pToneGen2->pulseTone->getInterval() != pToneGen2->interval) { pToneGen2->pulseTone->setInterval(pToneGen2->interval); }
+                //if (pToneGen2->pulseTone->getInitGain() != pToneGen2->initGain) { pToneGen2->pulseTone->setInitGain(pToneGen2->initGain); }
                 if (pToneGen2->pulseTone->getIntercomVolume() != pToneGen2->intercomVolume) { pToneGen2->pulseTone->setIntercomVolume(pToneGen2->intercomVolume); }
                 break;
             case PULSE_TONE_ONE_SEC:
                 if (pToneGen2->pulseTone->getFreq() != pToneGen2->freq) { pToneGen2->pulseTone->setFreq(pToneGen2->freq); }
                 if (pToneGen2->pulseTone->getChannel() != pToneGen2->pan) { pToneGen2->pulseTone->setChannel(pToneGen2->pan); }
                 if (pToneGen2->pulseTone->getGain() != pToneGen2->gain) { pToneGen2->pulseTone->setGain(pToneGen2->gain); }
-                if (pToneGen2->pulseTone->getInitGain() != pToneGen2->initGain) { pToneGen2->pulseTone->setInitGain(pToneGen2->initGain); }
-                if (pToneGen2->pulseTone->getInterval() != pToneGen2->interval) { pToneGen2->pulseTone->setInterval(pToneGen2->interval); }
+                //if (pToneGen2->pulseTone->getInitGain() != pToneGen2->initGain) { pToneGen2->pulseTone->setInitGain(pToneGen2->initGain); }
                 if (pToneGen2->pulseTone->getIntercomVolume() != pToneGen2->intercomVolume) { pToneGen2->pulseTone->setIntercomVolume(pToneGen2->intercomVolume); }
                 break;
             case WARBLE_TONE:

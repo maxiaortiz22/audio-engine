@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test
+# Install script for directory: C:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/pybind11/cmake_install.cmake")
+  include("C:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/test/build/pybind11/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/maxia/OneDrive/Desktop/uSound/audio-engine/test/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/maxia/OneDrive/Desktop/uSound/PublicAudioEngine/audio-engine/test/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

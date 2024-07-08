@@ -4,6 +4,7 @@ import audio_engine
 import numpy as np
 from scipy.fft import fft, fftfreq
 import matplotlib.pyplot as plt
+import soundfile as sf
 
 class PureToneTest(ToneTester):
 
@@ -30,11 +31,13 @@ class PureToneTest(ToneTester):
                 audio_engine.tone_generator_setValue(audio_engine.ToneGenParam.TG_FREQ, freq)
                 self.gen_data()
                 print(np.min(self.tone), np.max(self.tone))
-                self.play_data()
+                #self.play_data()
                 signal = self.tone
 
-                plt.plot(signal)
-                plt.show()
+                sf.write(f"AudioTester/audios/pure_tone_{freq}.wav", signal, self.sr)
+
+                #plt.plot(signal)
+                #plt.show()
 
                 #Check the level of the signals
                 #assert np.max(signal) >= 1.0, f"The amplitude of {freq} is not greater than 1.0: {max(signal)}"

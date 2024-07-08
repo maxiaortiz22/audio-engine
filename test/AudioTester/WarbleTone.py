@@ -7,6 +7,7 @@ import numpy as np
 from statistics import mode
 import pandas as pd
 import matplotlib.pyplot as plt
+import soundfile as sf
 
 class WarbleToneTest(ToneTester):
 
@@ -32,8 +33,10 @@ class WarbleToneTest(ToneTester):
                 print(np.min(self.tone), np.max(self.tone))
                 #self.play_data()
 
-                plt.plot(self.tone)
-                plt.show()
+                sf.write(f"AudioTester/audios/warble_tone_{freq}.wav", self.tone, self.sr)
+
+                #plt.plot(self.tone)
+                #plt.show()
                 
                 #fm, fc = self.get_frec_mod(self.data, freq)
 

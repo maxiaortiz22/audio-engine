@@ -5,6 +5,7 @@
 AudioEngine::AudioEngine(float sr) : sampleRate(sr), channel(LEFT_CHANNEL) {
     gain = 0.0;
     actualGain = -120;
+    interval = 150;
     gainChanged = true;
 }
 

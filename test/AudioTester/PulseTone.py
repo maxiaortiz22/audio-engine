@@ -5,6 +5,7 @@ from scipy.signal import hilbert, find_peaks
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import soundfile as sf
 
 class PulseToneTest(ToneTester):
 
@@ -30,6 +31,8 @@ class PulseToneTest(ToneTester):
                 self.gen_data()
                 print(np.min(self.tone), np.max(self.tone))
                 #self.play_data()
+
+                sf.write(f"AudioTester/audios/pulse_tone_{freq}.wav", self.tone, self.sr)
 
                 plt.plot(self.tone)
                 plt.show()

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\maxia\OneDrive\Desktop\uSound\audio-engine\test\build\CMakeFiles\95122c9a30b99c191078e0089e676480\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\maxia\OneDrive\Desktop\uSound\PublicAudioEngine\audio-engine\test\build\CMakeFiles\c8cf5af154124c6f3fddfbdc5e12a998\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{C56B6112-67AD-3A92-87B0-9C963621A2A8}</UniqueIdentifier>
+      <UniqueIdentifier>{E7420862-4DE5-325F-A76C-54A156FDAD92}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
